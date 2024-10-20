@@ -18,21 +18,19 @@ Click on the video below to find out what it looks like:
 ## Documentation
 Sending a notification to a client is as easy as calling this function from your
 server-side script:
-- `SendPlayerNotification(CPlayer player/null,
-	string message,
-	RGB color,
-	int lifespan,
-	int soundId/null = null)`
-	- `player`: Player to send notification to, or `null` for everyone on the
-	server.
-	- `message`: Notification content (text). Newlines (`\n`) are supported (up
-	to 4 lines); a line can begin with a backspace character (`\b`), which will
-	make that line entirely bold. Text tags are also supported (opening tag:
-	`[#hhhhhh]`, closing tag: `[#d]`; lowercase only).
-	- `color`: RGB class instance representing color of the entire text.
-	- `lifespan`: How long should this notification live for (in milliseconds).
-	- `soundId`: Sound to play for player when the notification is sent, `null`
-	if no sound shall be played at all. Defaults to `null` if omitted.
+- `SendPlayerNotification(player, message, color, lifespan, soundId = null)`
+	- (CPlayer/null) `player`: Player to send notification to, or `null` for
+	everyone on the server.
+	- (string) `message`: Notification content (text). Newlines (`\n`) are
+	supported (up to 4 lines); a line can begin with a backspace character
+	(`\b`), which will make that line entirely bold. Text tags are also
+	supported (opening tag: `[#hhhhhh]`, closing tag: `[#d]`; lowercase only).
+	- (RGB) `color`: RGB class instance representing color of the entire text.
+	- (int) `lifespan`: How long should this notification live for (in
+	milliseconds).
+	- (int/null) `soundId`: Sound to play for player when the notification is
+	sent, `null` if no sound shall be played at all. Defaults to `null` if
+	omitted.
 
 ## Examples
 ```
